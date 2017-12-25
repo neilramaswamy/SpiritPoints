@@ -1,0 +1,9 @@
+html
+  head
+    link(rel='stylesheet' href='../css/styles.css')
+  ul
+    each scores, eventName in chartData
+      li
+        a(href='eventDetails/?e=' + eventName) #{eventName}
+  footer
+    a(href='../') Semester Summary

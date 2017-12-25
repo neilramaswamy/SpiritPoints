@@ -1,0 +1,17 @@
+html
+  head
+    title Spirit Points
+    link(rel='stylesheet' href='css/styles.css')
+    link(rel='shortcut icon' href='/images/favicon.png')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js')
+  body
+    h1 Spirit Points
+    div
+      a(href='eventDetails/?e=' + recentEvent) #{recentEventMessage}
+    div
+      canvas(id="chart" width="600" height="500")
+    script.
+      var spiritChartData = !{JSON.stringify(chartData)};
+    script(src='./js/spiritchart.js')
+  footer
+    a(href='../history') Event history

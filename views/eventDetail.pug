@@ -1,0 +1,17 @@
+html
+  head
+    title Spirit Points
+    link(rel='stylesheet' href='../css/styles.css')
+    link(rel='shortcut icon' href='../images/favicon.png')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js')
+  body
+    h1 #{eventName}
+    canvas(id="chart" width="600" height="500")
+    script.
+      var spiritChartData = !{JSON.stringify(chartData)};
+      var isEvent = isEvent;
+    script(src='../js/spiritEvent.js')
+  footer
+    a(href='../history') Event History
+    | 
+    a(href='../') Semester summary
